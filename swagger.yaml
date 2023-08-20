@@ -77,14 +77,6 @@ paths:
       deprecated: false
       security:
         - bearer: []
-  /jobs/{id}:
-    parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        required: true
-        description: the job id
     post:
       tags:
         - Jobs
@@ -112,6 +104,14 @@ paths:
       deprecated: false
       security:
         - bearer: []
+  /jobs/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: the job id
     patch:
       tags:
         - Jobs
@@ -144,6 +144,19 @@ paths:
         - Jobs
       summary: delete job
       operationId: deletejob
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+      security:
+        - bearer: []
+    get:
+      tags:
+        - Jobs
+      summary: get a single job
+      operationId: getasinglejob
       parameters: []
       responses:
         "200":
