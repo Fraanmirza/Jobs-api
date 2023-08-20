@@ -34,7 +34,7 @@ app.use(cors());
 app.use(xss());
 
 app.get("/", (req, res) => {
-  res.send("Jobs API");
+  res.send("Jobs API hello world");
 });
 
 // routes
